@@ -700,6 +700,7 @@ input {
 
   section {
     height: 75vh;
+    margin-bottom: 10rem;
   }
 
   .home-subtext {
@@ -775,6 +776,7 @@ input {
   #blur {
     width: 100vh;
     height: 240rem;
+    z-index: -2;
   }
 
   #blob {
@@ -795,11 +797,5 @@ input {
     );
     animation: rotate 10s infinite;
     overflow: hidden;
-  }
-
-  #blobtwo,
-  #blobthree,
-  #blobfour {
-    display: none;
   }
 }
