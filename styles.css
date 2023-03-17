@@ -612,10 +612,6 @@ input {
   body {
     width: 100%;
   }
-  .background {
-    height: 240rem;
-    width: max-content;
-  }
 
   .underline::after {
     display: none;
@@ -677,6 +673,7 @@ input {
 
   #home-content {
     height: 50vh;
+    margin-bottom: 0;
   }
 
   #home-content h1 {
@@ -700,7 +697,7 @@ input {
 
   section {
     height: 75vh;
-    margin-bottom: 10rem;
+    padding-bottom: 10rem;
   }
 
   .home-subtext {
@@ -774,28 +771,20 @@ input {
   }
 
   #blur {
-    width: 100vh;
-    height: 240rem;
+    height: 100%;
+    width: 100vw;
+    position: absolute;
     z-index: -2;
+    backdrop-filter: blur(200px);
   }
 
-  #blob {
-    background-color: white;
+  #blob,
+  #blobtwo,
+  #blobthree,
+  #blobfour {
     height: 300px;
     aspect-ratio: 1;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    translate: -50% -50%;
-    border-radius: 50%;
     z-index: -3;
-    background: linear-gradient(
-      to right,
-      aquamarine,
-      mediumpurple,
-      rgb(194, 133, 3)
-    );
-    animation: rotate 10s infinite;
-    overflow: hidden;
+    position: absolute;
   }
 }
