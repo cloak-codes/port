@@ -610,7 +610,8 @@ input {
 
 @media screen and (max-width: 1100px) {
   body {
-    width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   .underline::after {
