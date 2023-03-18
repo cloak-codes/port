@@ -185,6 +185,7 @@ body {
   position: absolute;
   z-index: -2;
   backdrop-filter: blur(200px);
+   -webkit-backdrop-filter: blur(200px);
 }
 
 @keyframes rotate {
@@ -777,6 +778,7 @@ input {
     position: absolute;
     z-index: -2;
     backdrop-filter: blur(200px);
+     -webkit-backdrop-filter: blur(200px);
   }
 
   #blob,
