@@ -825,14 +825,14 @@ input {
   #blobtwo {
     position: absolute;
     right: 25%;
-    animation: rotate 20s infinite;
+    animation: rotate 15s infinite;
     overflow-x: hidden;
   }
 
   #blobthree {
     position: absolute;
     left: 50%;
-    animation: rotate 20s infinite;
+    animation: rotate 15s infinite;
     overflow-x: hidden;
   }
 
