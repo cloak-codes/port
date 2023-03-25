@@ -541,6 +541,7 @@ i:hover {
   border: 2px solid white;
   border-radius: 25px;
   background-color: rgba(46, 44, 44, 0.7);
+  cursor: crosshair;
 }
 
 @keyframes projectHover {
