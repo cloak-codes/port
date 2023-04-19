@@ -39,6 +39,7 @@ tt,
 var,
 b,
 u,
+i,
 center,
 dl,
 dt,
@@ -83,7 +84,6 @@ video {
   border: 0;
   font-size: 100%;
   font-family: "Space Mono", monospace;
-  color: white;
   scroll-behavior: smooth;
   text-decoration: none;
   cursor: crosshair;
@@ -94,16 +94,26 @@ body::-webkit-scrollbar {
 }
 
 body {
-  background-color: rgb(26, 24, 24);
+  background-color: #faf9f6;
   overflow-x: hidden;
   height: 100%;
   box-sizing: border-box;
+  color: #313334;
+}
+
+.dark-mode {
+  background-color: #313334;
+  color: #faf9f6;
 }
 
 .background {
   position: absolute;
   height: 480vh;
   width: max-content;
+}
+
+a:visited {
+  text-decoration: none;
 }
 
 #blob {
@@ -246,6 +256,7 @@ header {
 .underline {
   text-decoration: none;
   position: relative;
+  color: white;
 }
 
 .underline::after {
@@ -263,6 +274,34 @@ header {
 .underline:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+.dark-mode-button {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  z-index: 4;
+  height: 50px;
+  width: 50px;
+}
+
+.dark-mode-button button {
+  color: black;
+  border: 0.2rem solid black;
+  background-color: white;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.dark-mode-button i {
+  cursor: pointer;
+}
+
+.dark-mode-button button:hover {
+  color: white;
+  background-color: black;
+  border: 0.2rem solid white;
 }
 
 #home-content {
@@ -298,14 +337,14 @@ P {
   margin-top: 200px;
 }
 
-i {
+.socials-container i {
   font-size: 2.5rem;
   background: none;
   border-radius: 50%;
   padding: 50px;
 }
 
-i:hover {
+.socials-container i:hover {
   animation: zoom 0.5s forwards;
   animation-fill-mode: forwards;
 }
@@ -475,7 +514,7 @@ i:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #5f5f8c;
+  background-color: black;
   transform-origin: bottom right;
   transition: transform 0.5s ease-out;
 }
@@ -497,7 +536,7 @@ i:hover {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: white;
+  background-color: black;
   transform-origin: bottom right;
   transition: transform 0.5s ease-out;
 }
@@ -538,10 +577,9 @@ i:hover {
   height: 150px;
   display: flex;
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid black;
   border-radius: 25px;
-  background-color: rgba(46, 44, 44, 0.7);
-  cursor: crosshair;
+  background-color: rgba(151, 146, 146, 0.7);
 }
 
 @keyframes projectHover {
@@ -648,6 +686,17 @@ input {
     width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
+  }
+
+  .dark-mode-button {
+    bottom: 30px;
+    left: 30px;
+  }
+
+  .dark-mode-button button {
+    padding: 0px;
+    height: 60px;
+    aspect-ratio: 1;
   }
 
   .underline::after {
@@ -826,14 +875,14 @@ input {
   #blobtwo {
     position: absolute;
     right: 25%;
-    animation: rotate 15s infinite;
+    animation: rotate 20s infinite;
     overflow-x: hidden;
   }
 
   #blobthree {
     position: absolute;
     left: 50%;
-    animation: rotate 15s infinite;
+    animation: rotate 20s infinite;
     overflow-x: hidden;
   }
 
