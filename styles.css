@@ -699,6 +699,10 @@ input {
     aspect-ratio: 1;
   }
 
+   .socials-container i {
+    padding: 0;
+  }
+  
   .underline::after {
     display: none;
   }
